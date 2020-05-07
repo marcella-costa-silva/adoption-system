@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  {% block head %}
+    <title>Index</title>
+  {% endblock %}
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/imgs/favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <div class="links">
+      <a href="/">Sobre</a>
+      <a href="/portfolio">Aulas</a>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+</body>
+</html>
