@@ -1,0 +1,56 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+  <form class="card" method="POST" action="/animals">
+    <section 
+      class="avatar" 
+      style="background: url('https://source.unsplash.com/collection/9718726/500x500') no-repeat center center / cover">
+    </section>
+
+    <section class="details">
+      <h3>New Dog</h3>
+
+      <div class="item">
+        <div>Avatar URL</div>
+        <div>
+          <input type="url" name="avatar_url" id="avatar_url">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Name</div>
+        <div>
+          <input type="text" name="name" id="name">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Date of birth</div>
+        <div>
+          <input type="date" name="birth" id="birth">
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Gender</div>
+        <span>
+          <input type="radio" name="gender" value="M" checked> Male
+        </span>
+        <span>
+          <input type="radio" name="gender" value="F"> Female
+        </span>
+      </div>
+
+      <div class="item">
+        <div>Specialties</div>
+        <div>
+          <input type="text" name="specialties" id="specialties">
+        </div>
+      </div>
+
+      <button type="submit">Send</button>
+    </section>
+  </form>
+
+{% endblock content %}

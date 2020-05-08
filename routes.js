@@ -1,8 +1,11 @@
 const express = require('express')
 const routes = express.Router()
 
-routes.get('/', (req, res) => res.redirect('/animals/index'))
+routes.get('/', (req, res) => res.redirect('/animals'))
 routes.get('/animals', (req, res) => res.render('animals/index'))
-routes.get('/people', (req, res) => res.render('people/index'))
+routes.get('/animals/create', (req, res) => res.render('animals/create'))
+routes.get('/owners', (req, res) => res.render('owners/index'))
+
+routes.post('/animals', (req, res) => res.send('recebido'))
 
 module.exports = routes
