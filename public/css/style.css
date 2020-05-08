@@ -66,7 +66,7 @@ header {
 .card {
   background-color: #fff;
   width: 800px;
-  height: 400px;
+  min-height: 400px;
   margin: 45px auto; /* espaçamento ao centro (precisa do width) */
 
   display: grid;
@@ -88,10 +88,50 @@ header {
   }
 }
 
-.card .avatar {
+/* #### DETAILS #### */
 
+.details {
+  padding: 32px;
 }
 
-.card .details {
-
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
 }
+
+.details .item:last-child { /* retirar linha do último elemento */
+  border: none;
+}
+
+.details .item div:nth-child(1) { /* pega a primeira div */
+  color: #A39A92;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details h3,
+.details .item div:nth-child(2) { /* pega a segunda div */
+  color: #77685D;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background-color:#FFA62B;
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 12px;
+}
+
