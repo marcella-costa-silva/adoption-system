@@ -1,1 +1,18 @@
-{"avatar_url":"http://teste.com","name":"Marcella","birth":"2020-05-07","gender":"M","specialties":"teste"}
+{
+  "animals": [
+    {
+      "avatar_url": "http://teste.com",
+      "name": "Marcella",
+      "birth": "2020-04-30",
+      "gender": "M",
+      "specialties": "teste"
+    },
+    {
+      "avatar_url": "http://taaaaaaaaeste.com",
+      "name": "Thorzinho",
+      "birth": "2020-05-22",
+      "gender": "F",
+      "specialties": "dormiiiiir"
+    }
+  ]
+}

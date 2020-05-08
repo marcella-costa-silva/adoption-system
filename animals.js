@@ -1,4 +1,5 @@
 const fs = require('fs')
+const data = require('./data.json')
 
 // create
 exports.post = (req, res) => {
@@ -9,8 +10,11 @@ exports.post = (req, res) => {
       return res.send('Please, fill all fields')
   }
 
-  // Escreve no arquivo com os dados.
-  fs.writeFile('data.json', JSON.stringify(req.body), (err) => {
+  // [{...}] 
+  data.animals.push(req.body) // [{...}, {...}]
+
+  // Escreve os dados no arquivo data.json.
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send(`Write file error: ${err}`)
     return res.redirect('/animals')
   })
