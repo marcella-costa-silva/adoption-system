@@ -6,6 +6,8 @@ routes.get('/animals', (req, res) => res.render('animals/index'))
 routes.get('/animals/create', (req, res) => res.render('animals/create'))
 routes.get('/owners', (req, res) => res.render('owners/index'))
 
-routes.post('/animals', (req, res) => res.send('recebido'))
+routes.post('/animals', (req, res) => {
+  return res.send(req.body) // Corpo da requisição POST
+})
 
 module.exports = routes
