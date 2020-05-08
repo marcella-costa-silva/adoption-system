@@ -10,6 +10,10 @@ exports.post = (req, res) => {
       return res.send('Please, fill all fields')
   }
 
+  req.body.birth = Date.parse(req.body.birth)
+  req.body.created_at = Date.now() // Add a data de criação do registro.
+  
+
   // [{...}] 
   data.animals.push(req.body) // [{...}, {...}]
 
