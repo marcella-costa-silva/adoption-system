@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { age } = require('./utils')
+const { age, date } = require('./utils')
 
 /**
  * req.query.id -> http://localhost:3000/animals?id=1
@@ -63,5 +63,12 @@ exports.edit = (req, res) => {
   const { id } = req.params
   const foundAnimal = data.animals.find(animal => animal.id == id)
   if (!foundAnimal) return res.send('Animal not found :(')
-  return res.render('animals/edit', { animal: foundAnimal })
+
+  const animal = {
+    ...foundAnimal,
+    birth: date(foundAnimal.birth)
+    // birth: '2000-02-01'
+  }
+
+  return res.render('animals/edit', { animal })
 }
