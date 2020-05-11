@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { age } = require('./utils')
 
 /**
  * req.query.id -> http://localhost:3000/animals?id=1
@@ -16,7 +17,7 @@ exports.show = (req, res) => {
 
   const animal = {
     ...foundAnimal,
-    age: '',
+    age: age(foundAnimal.birth),
     specialties: foundAnimal.specialties.split(','), // Pega a string e transforma num array
     created_at: '',
   }
