@@ -11,8 +11,17 @@ const data = require('./data.json')
 exports.show = (req, res) => {
   const { id } = req.params
   const foundAnimal = data.animals.find((animal) => animal.id == id) // percorre o array para encontrar o animal
+ 
   if (!foundAnimal) return res.send('Animal not found :(')
-  return res.send(foundAnimal)
+
+  const animal = {
+    ...foundAnimal,
+    age: '',
+    specialties: foundAnimal.specialties.split(','), // Pega a string e transforma num array
+    created_at: '',
+  }
+
+  return res.render('animals/show', { animal })
 }
 
 // create
