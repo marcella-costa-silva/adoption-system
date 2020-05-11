@@ -1,6 +1,20 @@
 const fs = require('fs')
 const data = require('./data.json')
 
+/**
+ * req.query.id -> http://localhost:3000/animals?id=1
+ * req.body -> através do formulário (POST)
+ * req.params.id -> rota /:id
+ */
+
+// show by id
+exports.show = (req, res) => {
+  const { id } = req.params
+  const foundAnimal = data.animals.find((animal) => animal.id == id) // percorre o array para encontrar o animal
+  if (!foundAnimal) return res.send('Animal not found :(')
+  return res.send(foundAnimal)
+}
+
 // create
 exports.post = (req, res) => {
   // req.body = {"avatar_url":"http://teste.com","name":"Marcella","birth":"2020-05-14","gender":"M","specialties":"teste"}
@@ -33,3 +47,4 @@ exports.post = (req, res) => {
     return res.redirect('/animals')
   })
 }
+

@@ -8,6 +8,15 @@
       "gender": "M",
       "specialties": "Dormir",
       "created_at": 1589202718221
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://teste2.com",
+      "name": "Suzi",
+      "birth": 1525478400000,
+      "gender": "F",
+      "specialties": "Comer",
+      "created_at": 1589203801257
     }
   ]
 }
