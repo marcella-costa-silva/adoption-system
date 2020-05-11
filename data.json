@@ -53,6 +53,15 @@
       "gender": "F",
       "specialties": "teste",
       "created_at": 1589206564896
+    },
+    {
+      "id": 7,
+      "avatar_url": "http://teste.com",
+      "name": "Marcella",
+      "birth": 1588291200000,
+      "gender": "F",
+      "specialties": "teste",
+      "created_at": 1589212019725
     }
   ]
 }

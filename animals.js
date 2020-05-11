@@ -19,7 +19,7 @@ exports.show = (req, res) => {
     ...foundAnimal,
     age: age(foundAnimal.birth),
     specialties: foundAnimal.specialties.split(','), // Pega a string e transforma num array
-    created_at: '',
+    created_at: new Intl.DateTimeFormat('pt-BR').format(foundAnimal.created_at)
   }
 
   return res.render('animals/show', { animal })
