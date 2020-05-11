@@ -58,3 +58,10 @@ exports.post = (req, res) => {
   })
 }
 
+// edit
+exports.edit = (req, res) => {
+  const { id } = req.params
+  const foundAnimal = data.animals.find(animal => animal.id == id)
+  if (!foundAnimal) return res.send('Animal not found :(')
+  return res.render('animals/edit', { animal: foundAnimal })
+}

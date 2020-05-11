@@ -1,38 +1,44 @@
 <div class="item">
   <div>Avatar URL</div>
   <div>
-    <input type="url" name="avatar_url" id="avatar_url">
+    <input type="url" name="avatar_url" id="avatar_url" value='{{ animal.avatar_url }}'>
   </div>
 </div>
 
 <div class="item">
   <div>Name</div>
   <div>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" value='{{ animal.name }}'>
   </div>
 </div>
 
 <div class="item">
   <div>Date of birth</div>
   <div>
-    <input type="date" name="birth" id="birth">
+    <input type="date" name="birth" id="birth" value='{{ animal.birth }}'>
   </div>
 </div>
 
 <div class="item">
   <div>Gender</div>
   <span>
-    <input type="radio" name="gender" value="M" checked> Male
+    <input type="radio" name="gender" value="M" 
+      {% if animal.gender == 'M' %} 
+        checked 
+      {% endif %}> Male
   </span>
   <span>
-    <input type="radio" name="gender" value="F"> Female
+    <input type="radio" name="gender" value="F"
+      {% if animal.gender == 'F' %} 
+        checked 
+      {% endif %}> Female
   </span>
 </div>
 
 <div class="item">
   <div>Specialties</div>
   <div>
-    <input type="text" name="specialties" id="specialties">
+    <input type="text" name="specialties" id="specialties" value='{{ animal.specialties }}'>
   </div>
 </div>
 
