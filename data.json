@@ -3,20 +3,11 @@
     {
       "id": 1,
       "avatar_url": "http://teste.com",
-      "name": "Marcella",
-      "birth": 1587859200000,
-      "gender": "F",
-      "specialties": "teste",
-      "created_at": 1588957031699
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://testdsdsdsdse.com",
-      "name": "github-course",
-      "birth": 1587945600000,
+      "name": "Thor",
+      "birth": 1546300800000,
       "gender": "M",
-      "specialties": "dormiiiiir",
-      "created_at": 1588957096377
+      "specialties": "Dormir",
+      "created_at": 1589202718221
     }
   ]
 }

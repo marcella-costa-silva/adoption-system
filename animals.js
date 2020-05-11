@@ -4,8 +4,7 @@ const data = require('./data.json')
 // create
 exports.post = (req, res) => {
   // req.body = {"avatar_url":"http://teste.com","name":"Marcella","birth":"2020-05-14","gender":"M","specialties":"teste"}
-  // Object.keys(req.body) = ["avatar_url","name","birth","gender","specialties"]
-  const keys = Object.keys(req.body)
+  const keys = Object.keys(req.body) // ["avatar_url","name","birth","gender","specialties"]
   
   for (let key of keys) {
     if (req.body[key] == '') 
