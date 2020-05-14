@@ -71,3 +71,33 @@ exports.edit = (req, res) => {
 
   return res.render('animals/edit', { animal })
 }
+
+// put
+exports.put = (req, res) => {
+  const { id } = req.body
+  let index = 0
+
+  const foundAnimal = data.animals.find((animal, foundIndex) => {
+    if (animal.id == id) {
+      index = foundIndex
+      return true
+    }
+  })
+
+  if (!foundAnimal) return res.send('Animal not found :(')
+
+  const animal = {
+    ...foundAnimal,
+    ...req.body,
+    birth: Date.parse(req.body.birth)
+  }
+
+  data.animals[index] = animal // Atualiza de acordo com o index
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
+    if (err) return res.send(`Write error: ${err}`)
+    return res.redirect('/animals/${id}')
+  })
+
+
+}

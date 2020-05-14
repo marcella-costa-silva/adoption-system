@@ -11,4 +11,6 @@ routes.get('/animals/:id/edit', animals.edit)
 
 routes.post('/animals', animals.post)
 
+routes.put('/animals', animals.put)
+
 module.exports = routes
