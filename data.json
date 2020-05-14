@@ -1,24 +1,6 @@
 {
   "animals": [
     {
-      "id": "1",
-      "avatar_url": "https://source.unsplash.com/collection/9718726/500x500",
-      "name": "Thorzaum",
-      "birth": 1499817600000,
-      "gender": "M",
-      "specialties": "Dormir, comer",
-      "created_at": 1589202718221
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/9718726/500x500",
-      "name": "Suzi",
-      "birth": 1525478400000,
-      "gender": "F",
-      "specialties": "Comer",
-      "created_at": 1589203801257
-    },
-    {
       "id": 3,
       "avatar_url": "https://source.unsplash.com/collection/9718726/500x500",
       "name": "Teste",

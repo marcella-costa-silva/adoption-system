@@ -13,4 +13,6 @@ routes.post('/animals', animals.post)
 
 routes.put('/animals', animals.put)
 
+routes.delete('/animals', animals.delete)
+
 module.exports = routes

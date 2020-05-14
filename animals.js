@@ -99,3 +99,15 @@ exports.put = (req, res) => {
     return res.redirect(`/animals/${id}`)
   })
 }
+
+// delete
+exports.delete = (req, res) => {
+  const { id } = req.body
+  const filteredAnimals = data.animals.filter(animal => animal.id != id) // Retorna apenas o que for true
+  data.animals = filteredAnimals // Atualiza os dados
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), err => {
+    if (err) return res.send(`Write error: ${err}`)
+    return res.redirect('/animals')
+  })
+}
