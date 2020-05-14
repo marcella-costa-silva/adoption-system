@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
 
-  {% block head %}
-    <title>Adoption System</title>
-  {% endblock %}
+    {% block head %}
+      <title>Adoption System</title>
+    {% endblock %}
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="/imgs/favicon.png" type="image/x-icon" />
-</head>
-<body>
-  <header>
-    <div class="links">
-      <a href="/" class="active">Dogs</a>
-      <a href="/people">Future owners</a>
-    </div>
-  </header>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/imgs/favicon.png" type="image/x-icon"/>
+  </head>
 
-  {% block content %}{% endblock %}
+  <body>
+    <header>
+      <div class="links">
+        <a href="/" class="active">Dogs</a>
+        <a href="/people">Future owners</a>
+      </div>
+    </header>
 
-</body>
+    {% block content %}{% endblock %}
+  </body>
 </html>

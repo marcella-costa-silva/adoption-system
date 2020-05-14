@@ -12,7 +12,7 @@ const { age, date } = require('./utils')
 exports.show = (req, res) => {
   const { id } = req.params
   const foundAnimal = data.animals.find((animal) => animal.id == id) // percorre o array para encontrar o animal
- 
+
   if (!foundAnimal) return res.send('Animal not found :(')
 
   const animal = {
@@ -29,9 +29,9 @@ exports.show = (req, res) => {
 exports.post = (req, res) => {
   // req.body = {"avatar_url":"http://teste.com","name":"Marcella","birth":"2020-05-14","gender":"M","specialties":"teste"}
   const keys = Object.keys(req.body) // ["avatar_url","name","birth","gender","specialties"]
-  
+
   for (let key of keys) {
-    if (req.body[key] == '') 
+    if (req.body[key] == '')
       return res.send('Please, fill all fields')
   }
 
@@ -40,7 +40,7 @@ exports.post = (req, res) => {
   birth = Date.parse(birth)
   const created_at = Date.now() // Add a data de criação do registro.
   const id = Number(data.animals.length + 1) // Add ID.
-  
+
   data.animals.push({
     id,
     avatar_url,
@@ -67,7 +67,6 @@ exports.edit = (req, res) => {
   const animal = {
     ...foundAnimal,
     birth: date(foundAnimal.birth)
-    // birth: '2000-02-01'
   }
 
   return res.render('animals/edit', { animal })

@@ -22,16 +22,12 @@
 <div class="item">
   <div>Gender</div>
   <span>
-    <input type="radio" name="gender" value="M" 
-      {% if animal.gender == 'M' %} 
-        checked 
-      {% endif %}> Male
+    <input type="radio" name="gender" value="M" {% if animal.gender == 'M' %} checked="checked" {% endif %}>
+    Male
   </span>
   <span>
-    <input type="radio" name="gender" value="F"
-      {% if animal.gender == 'F' %} 
-        checked 
-      {% endif %}> Female
+    <input type="radio" name="gender" value="F" {% if animal.gender == 'F' %} checked="checked" {% endif %}>
+    Female
   </span>
 </div>
 

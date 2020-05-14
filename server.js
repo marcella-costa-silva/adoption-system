@@ -4,14 +4,14 @@ const routes = require('./routes')
 
 const server = express()
 
-server.use(express.urlencoded({ extended:true })) // Faz funcionar o req.body
+server.use(express.urlencoded({ extended: true })) // Faz funcionar o req.body
 server.use(express.static('public'))
 server.use(routes)
 
 server.set('view engine', 'njk')
 
-nunjucks.configure('views', { 
-  express: server, 
+nunjucks.configure('views', {
+  express: server,
   autoescape: false,
   noCache: true
 })
