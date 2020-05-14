@@ -78,7 +78,7 @@ exports.put = (req, res) => {
   let index = 0
 
   const foundAnimal = data.animals.find((animal, foundIndex) => {
-    if (animal.id == id) {
+    if (id == animal.id) {
       index = foundIndex
       return true
     }
@@ -96,8 +96,6 @@ exports.put = (req, res) => {
 
   fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
     if (err) return res.send(`Write error: ${err}`)
-    return res.redirect('/animals/${id}')
+    return res.redirect(`/animals/${id}`)
   })
-
-
 }

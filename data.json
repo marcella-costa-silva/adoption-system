@@ -1,10 +1,10 @@
 {
   "animals": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "https://source.unsplash.com/collection/9718726/500x500",
-      "name": "Thor",
-      "birth": 1546300800000,
+      "name": "Thorzaum",
+      "birth": 1499817600000,
       "gender": "M",
       "specialties": "Dormir, comer",
       "created_at": 1589202718221
@@ -37,9 +37,9 @@
       "created_at": 1589206355360
     },
     {
-      "id": 5,
+      "id": "5",
       "avatar_url": "https://source.unsplash.com/collection/9718726/500x500",
-      "name": "Marcella",
+      "name": "Marcella0",
       "birth": 470620800000,
       "gender": "M",
       "specialties": "dormiiiiir",
